@@ -54,4 +54,8 @@
   .news-article {
     @apply p-0;
   }
+
+  .news-archive {
+    @apply flex flex-row gap-3 py-4 text-gray-400 font-semibold;
+  }
 }
