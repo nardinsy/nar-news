@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-[#0D0D0C] text-[#E2E2DD] min-h-screen;
+  }
+}
+
+@layer utilities {
+  /* ===== TYPOGRAPHY */
+  .h1 {
+    @apply text-[34px] leading-[42px] font-bold;
+  }
+  .h2 {
+    @apply text-[24px] leading-[36px] font-bold;
+  }
+
+  .page {
+    @apply w-11/12 mx-auto;
+  }
+
+  /* HEADER */
+  .main-header {
+    @apply flex justify-between items-center my-8;
+  }
+
+  .nav {
+    @apply flex gap-4 font-bold;
+  }
+  .nav-item {
+    @apply px-4 py-2 hover:text-gray-500;
+  }
+  .nav-item-active {
+    @apply bg-slate-400 rounded-sm;
+  }
+
+  /* NEWS */
+  .news-list {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+  .news-item {
+    @apply flex flex-col items-center gap-6 m-8 text-gray-300 no-underline rounded text-lg p-0 pb-4 hover:bg-gray-800;
+  }
+  .news-item-image {
+    @apply w-full h-56 object-cover rounded;
+  }
+  .news-article {
+    @apply p-0;
+  }
+}
