@@ -1,6 +1,8 @@
-import { getNewsByID } from "@/lib/news";
-import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import Image from "next/image";
+
+import { getNewsByID } from "@/lib/news";
 
 const NewsDetailPage = ({ params }: { params: { id: string } }) => {
   const newsItem = getNewsByID(params.id);
@@ -11,13 +13,13 @@ const NewsDetailPage = ({ params }: { params: { id: string } }) => {
 
   return (
     <article className="news-article">
-      <Image
-        src={`/images/news/${newsItem.image}`}
-        width={150}
-        height={150}
-        alt="image"
-        className="pb-4"
-      />
+      <Link href={`/news/${newsItem.id}/image`}>
+        <img
+          src={`/images/news/${newsItem.image}`}
+          alt={newsItem.title}
+          className="news-article-img"
+        />
+      </Link>
       <h2 className="h2 pb-4">{newsItem.title}</h2>
       <time dateTime={newsItem.date} className="pb-4">
         {newsItem.date}

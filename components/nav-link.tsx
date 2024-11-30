@@ -16,7 +16,10 @@ const NavLink = ({
   return (
     <Link
       href={href}
-      className={cn("nav-item", path === href ? "nav-item-active" : undefined)}
+      className={cn(
+        "nav-item",
+        path.startsWith(href) ? "nav-item-active" : undefined
+      )}
     >
       {children}
     </Link>
