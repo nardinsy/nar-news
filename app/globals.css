@@ -61,8 +61,12 @@
   .news-article-img {
     @apply w-48 h-48 mb-4;
   }
+
   /* IMAGE */
   .fullscreen-image {
+    @apply w-full;
+  }
+  .fullscreen-image img {
     @apply w-full h-full object-contain;
   }
 
