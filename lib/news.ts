@@ -1,4 +1,5 @@
 import { DUMMY_NEWS } from "@/constants/dummy-news";
+import { NewsType } from "@/types/types";
 
 export function getAllNews() {
   return DUMMY_NEWS;
@@ -48,4 +49,8 @@ export function getNewsForYearAndMonth(year: number, month: number) {
     const newsMonth = new Date(news.date).getMonth() + 1;
     return newsYear === +year && newsMonth === +month;
   });
+}
+
+export function addNewsBtn(newNews: NewsType) {
+  DUMMY_NEWS.push(newNews);
 }

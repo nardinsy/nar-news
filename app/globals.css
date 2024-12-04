@@ -96,4 +96,35 @@
   .home a {
     @apply inline-block px-4 py-4 bg-[#BCBCB7] text-[#181817] rounded-[4px] font-bold mt-16 hover:bg-[#e5e5e1];
   }
+
+  /* FORM */
+  .form {
+    @apply w-[80%] mx-auto md:w-[60%];
+  }
+  .form-field {
+    @apply mb-4 flex flex-col;
+  }
+  .form-field label {
+    @apply font-bold pb-2 pl-2;
+  }
+  .form-field input {
+    @apply w-full px-2 py-4 rounded-xl outline-none text-gray-900;
+  }
+  .form-field textarea {
+    @apply w-full px-2 py-4 rounded-xl outline-none text-gray-900 resize-none;
+  }
+  .form-submit-btn {
+    @apply bg-[#BCBCB7] text-gray-900 px-4 py-2 rounded-xl hover:text-green-600;
+  }
+
+  /* FILEUPLOADER */
+  .file-uploader-container {
+    @apply relative w-[15rem] h-[15rem] md:w-[20rem] flex flex-col justify-center items-center bg-[#41413f] rounded-lg text-[#E2E2DD] mb-4 cursor-pointer;
+  }
+  .file-uploader-edit {
+    @apply absolute top-1 right-1;
+  }
+  .file-uploader-img {
+    @apply w-[15rem] h-[15rem] md:w-[20rem] rounded-lg object-cover;
+  }
 }
