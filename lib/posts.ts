@@ -51,6 +51,8 @@ export function getNewsForYearAndMonth(year: number, month: number) {
   });
 }
 
-export function addNewsBtn(newNews: NewsType) {
+export async function addNews(newNews: NewsType) {
   DUMMY_NEWS.push(newNews);
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 }

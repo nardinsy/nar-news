@@ -6,7 +6,7 @@ import {
   getAvailableNewsYears,
   getNewsForYear,
   getNewsForYearAndMonth,
-} from "@/lib/news";
+} from "@/lib/posts";
 
 const FilteredNewsPage = ({ params }: { params: any }) => {
   const filter = params.filter;

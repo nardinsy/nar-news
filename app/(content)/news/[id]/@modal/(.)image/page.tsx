@@ -1,6 +1,6 @@
 "use client";
 
-import { getNewsByID } from "@/lib/news";
+import { getNewsByID } from "@/lib/posts";
 import { notFound, useRouter } from "next/navigation";
 
 const ImagePage = ({ params }: { params: { id: string } }) => {

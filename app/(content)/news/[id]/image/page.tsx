@@ -1,4 +1,4 @@
-import { getNewsByID } from "@/lib/news";
+import { getNewsByID } from "@/lib/posts";
 import { notFound } from "next/navigation";
 
 const ImagePage = ({ params }: { params: any }) => {

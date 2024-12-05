@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
-import { getNewsByID } from "@/lib/news";
+import { getNewsByID } from "@/lib/posts";
 
 const NewsDetailPage = ({ params }: { params: { id: string } }) => {
   const newsItem = getNewsByID(params.id);
