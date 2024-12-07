@@ -4,9 +4,10 @@ import { useFormState } from "react-dom";
 
 import FileUploader from "./file-uploader";
 import FormSubmit from "./form-submit";
+import { error } from "console";
 
 const NewsForm = ({ action }: { action: any }) => {
-  const [state, formAction] = useFormState(action, {});
+  const [state, formAction] = useFormState(action, { errors: [] });
 
   return (
     <form action={formAction} className="form">
@@ -23,13 +24,15 @@ const NewsForm = ({ action }: { action: any }) => {
       <FileUploader />
 
       <FormSubmit />
-      {/* {state.errors && (
+      {state.errors && (
         <ul>
           {state.errors.map((error) => (
-            <li key={error}>{error}</li>
+            <li key={error} className="text-red-400">
+              {error}
+            </li>
           ))}
         </ul>
-      )} */}
+      )}
     </form>
   );
 };

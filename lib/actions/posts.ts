@@ -21,9 +21,9 @@ export async function createNews(prevState: any, formData: FormData) {
     errors.push("Content is required.");
   }
 
-  if (!image || image.trim().length === 0) {
-    errors.push("Image is required.");
-  }
+  // if (!image || image.trim().length === 0) {
+  //   errors.push("Image is required.");
+  // }
 
   if (errors.length > 0) {
     return { errors };
@@ -35,7 +35,7 @@ export async function createNews(prevState: any, formData: FormData) {
     title,
     image: "ai-robot.jpg",
     date: "2021-07-01",
-    content,
+    content: "",
   } as NewsType;
 
   await addNews(newNews);
